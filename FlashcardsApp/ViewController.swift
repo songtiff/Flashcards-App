@@ -12,10 +12,15 @@ class ViewController: UIViewController {
 
     @IBOutlet weak var answerPie: UILabel!
     @IBOutlet weak var questionPie: UILabel!
+    @IBOutlet weak var card: UIView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
+        card.layer.cornerRadius = 20.0
+        card.clipsToBounds = true
+        card.layer.shadowRadius = 15.0
+        card.layer.shadowOpacity = 0.2
     }
 
     @IBAction func didTapOnFlashcard(_ sender: Any) {
@@ -27,7 +32,6 @@ class ViewController: UIViewController {
         }else{ //if the question label is showing and the answer label is hidden
             questionPie.isHidden = true
             answerPie.isHidden = false
-            
         }
     }
     
