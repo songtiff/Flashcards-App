@@ -10,7 +10,7 @@ the question and answer once the user taps on the flashcard.
 
 ### App Walk-though
 
-<img src="https://recordit.co/uKuPnMDYKw" width=200><br>
+<img src="https://recordit.co/qevLkevv18" width=200><br>
 
 `TODO://` In the User stories section below, add an `x` between the `-[ ]` like this `- [x]` for any user story you complete. (☝️ Remove this paragraph after after checking off user stories)
 
