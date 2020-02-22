@@ -19,7 +19,16 @@ class ViewController: UIViewController {
     }
 
     @IBAction func didTapOnFlashcard(_ sender: Any) {
-        isHidden = true
+        if(questionPie.isHidden){
+            questionPie.isHidden = false
+            answerPie.isHidden = true
+            
+            
+        }else{ //if the question label is showing and the answer label is hidden
+            questionPie.isHidden = true
+            answerPie.isHidden = false
+            
+        }
     }
     
 }
