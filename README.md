@@ -5,7 +5,7 @@
 Allows user to create their own questions and answers. Also allows user to cancel the question/answer creation screen and click done if they are finished with creating a question.
 
 ### App Walk-though
-<img src="http://g.recordit.co/C88DXZ2iOc.gif width=200><br>
+<img src="http://g.recordit.co/C88DXZ2iOc.gif" width=200><br>
 
 `TODO://` In the User stories section below, add an `x` between the `-[ ]` like this `- [x]` for any user story you complete. (☝️ Remove this paragraph after after checking off user stories)
 
