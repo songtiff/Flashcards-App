@@ -47,6 +47,30 @@
                                     <segue destination="WRj-RO-yxz" kind="presentation" id="zJq-1V-WZd"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ivZ-nJ-eFH">
+                                <rect key="frame" x="92" y="418" width="230" height="90"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.99818652868270874" green="0.8460882306098938" blue="0.64310109615325928" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <state key="normal" title="Pizza">
+                                    <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                </state>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bay-nL-seW">
+                                <rect key="frame" x="92" y="546" width="230" height="90"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.99829107522964478" green="0.84972220659255981" blue="0.67055696249008179" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <state key="normal" title="Tarta">
+                                    <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                </state>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ua2-pG-JCk">
+                                <rect key="frame" x="92" y="673" width="230" height="93"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="1" green="0.85205173541734358" blue="0.69481357774583097" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <state key="normal" title="Tarte">
+                                    <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                </state>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <gestureRecognizers/>
@@ -58,7 +82,10 @@
                     <connections>
                         <outlet property="answerPie" destination="qQ9-qB-kf1" id="kfI-Lr-nNh"/>
                         <outlet property="card" destination="RV1-09-jXc" id="tzm-7A-HPV"/>
+                        <outlet property="firstOptionCard" destination="ivZ-nJ-eFH" id="JmK-Zj-P1C"/>
                         <outlet property="questionPie" destination="0Mu-Zh-NgP" id="VcL-0C-wUn"/>
+                        <outlet property="secondOptionCard" destination="bay-nL-seW" id="M11-4U-QUa"/>
+                        <outlet property="thirdOptionCard" destination="Ua2-pG-JCk" id="JSu-xS-uM8"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
