@@ -70,10 +70,10 @@
             </objects>
             <point key="canvasLocation" x="137.68115942028987" y="113.83928571428571"/>
         </scene>
-        <!--View Controller-->
+        <!--Creation View Controller-->
         <scene sceneID="vYI-Ma-Tcg">
             <objects>
-                <viewController id="MmU-pG-9yV" sceneMemberID="viewController">
+                <viewController id="MmU-pG-9yV" customClass="CreationViewController" customModule="FlashcardsApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="DVO-aE-PHD">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -94,7 +94,13 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="bi7-ap-a4P"/>
                     </view>
-                    <navigationItem key="navigationItem" id="cVl-H5-fok"/>
+                    <navigationItem key="navigationItem" id="cVl-H5-fok">
+                        <barButtonItem key="leftBarButtonItem" title="Cancel" id="fFu-cH-amB">
+                            <connections>
+                                <action selector="didTapOnCancel:" destination="MmU-pG-9yV" id="EDU-Rg-Bng"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6KC-3U-j8c" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
