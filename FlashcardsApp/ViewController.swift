@@ -34,6 +34,18 @@ class ViewController: UIViewController {
             answerPie.isHidden = false
         }
     }
+    func updateFlashcard(question: String, answer: String) {
+        
+    }
     
-}
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        let navigationController = segue.destination as! UINavigationController
+        let creationContoller = navigationController.topViewController as! CreationViewController
+        creationContoller.flashcardsController = self
+     
+        
+    }
+    
+    }
+    
 
