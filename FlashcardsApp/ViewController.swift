@@ -21,6 +21,12 @@ class ViewController: UIViewController {
     @IBOutlet weak var firstOptionCard: UIButton!
     @IBOutlet weak var secondOptionCard: UIButton!
     @IBOutlet weak var thirdOptionCard: UIButton!
+    @IBOutlet weak var prevButton: UIButton!
+    @IBOutlet weak var nextButton: UIButton!
+    
+    var flashcards = [Flashcard]()
+    //Current flashcard index
+    var currentIndex = 0
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -50,10 +56,12 @@ class ViewController: UIViewController {
         thirdOptionCard.layer.shadowRadius = 15.0
         thirdOptionCard.layer.shadowOpacity = 4.0
         thirdOptionCard.clipsToBounds = true
+        
+        updateFlashcard(question: "What is the Italian word for pie?", answer: "Pizza")
 
         
     }
-
+    
     @IBAction func didTapOnFlashcard(_ sender: Any) {
         if(questionPie.isHidden){
             questionPie.isHidden = false
@@ -70,7 +78,15 @@ class ViewController: UIViewController {
         let flashcard = Flashcard(question: question, answer: answer)
         questionPie.text = flashcard.question
         answerPie.text = flashcard.answer
+        flashcards.append(flashcard)
         
+    }
+    
+    @IBAction func didTapOnPrev(_ sender: Any) {
+    }
+    
+
+    @IBAction func didTapOnNext(_ sender: Any) {
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {

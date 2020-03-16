@@ -71,6 +71,22 @@
                                     <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 </state>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uor-2M-5VM">
+                                <rect key="frame" x="92" y="81" width="31" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Prev"/>
+                                <connections>
+                                    <action selector="didTapOnPrev:" destination="BYZ-38-t0r" eventType="touchUpInside" id="NCo-Uu-xcU"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3bH-UC-BrR">
+                                <rect key="frame" x="290" y="81" width="32" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Next"/>
+                                <connections>
+                                    <action selector="didTapOnNext:" destination="BYZ-38-t0r" eventType="touchUpInside" id="4vH-35-c3C"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <gestureRecognizers/>
@@ -83,6 +99,8 @@
                         <outlet property="answerPie" destination="qQ9-qB-kf1" id="kfI-Lr-nNh"/>
                         <outlet property="card" destination="RV1-09-jXc" id="tzm-7A-HPV"/>
                         <outlet property="firstOptionCard" destination="ivZ-nJ-eFH" id="JmK-Zj-P1C"/>
+                        <outlet property="nextButton" destination="3bH-UC-BrR" id="2m9-zE-vt4"/>
+                        <outlet property="prevButton" destination="uor-2M-5VM" id="sAe-ai-azc"/>
                         <outlet property="questionPie" destination="0Mu-Zh-NgP" id="VcL-0C-wUn"/>
                         <outlet property="secondOptionCard" destination="bay-nL-seW" id="M11-4U-QUa"/>
                         <outlet property="thirdOptionCard" destination="Ua2-pG-JCk" id="JSu-xS-uM8"/>
