@@ -80,13 +80,55 @@ class ViewController: UIViewController {
         answerPie.text = flashcard.answer
         flashcards.append(flashcard)
         
+        // logging to the console
+        print("owo added new flashcard")
+        print("owo we now have \(flashcards.count) flashcards")
+        
+        //update current index
+        currentIndex = flashcards.count - 1
+        print("owo our current index is \(currentIndex)")
+        
+        updateNextPrevButtons()
+        updateLabels()
+    }
+    
+    func updateNextPrevButtons() {
+        //disable next button if at the end
+        if currentIndex == flashcards.count - 1 {
+            nextButton.isEnabled = true
+        }
+        else {
+            nextButton.isEnabled = false
+        }
+        //disable prev button if at the beginning
+    }
+    
+    func updateLabels() {
+        //get current flashcard
+        let currentFlashcard = flashcards[currentIndex]
+        
+        //update labels
+        questionPie.text = currentFlashcard.question
+        answerPie.text = currentFlashcard.answer
     }
     
     @IBAction func didTapOnPrev(_ sender: Any) {
+        //decrease current index
+        currentIndex = currentIndex - 1
+        //update labels
+        updateLabels()
+        //update buttons
+        updateNextPrevButtons()
     }
     
 
     @IBAction func didTapOnNext(_ sender: Any) {
+        //increase current index
+        currentIndex = currentIndex + 1
+        //update labels
+        updateLabels()
+        //update buttons
+        updateNextPrevButtons()
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
