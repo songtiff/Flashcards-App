@@ -57,7 +57,16 @@ class ViewController: UIViewController {
         thirdOptionCard.layer.shadowOpacity = 4.0
         thirdOptionCard.clipsToBounds = true
         
-        updateFlashcard(question: "What is the Italian word for pie?", answer: "Pizza")
+        //read saved flashcards
+        readSavedFlashcards()
+        
+        if flashcards.count == 0 {
+            updateFlashcard(question: "What is the Italian word for pie?", answer: "Pizza")
+        }
+        else {
+            updateLabels()
+            updateNextPrevButtons()
+        }
 
         
     }
@@ -152,11 +161,17 @@ class ViewController: UIViewController {
     
     func readSavedFlashcards() {
         //read dictionary array from disk (if any)
-        if let dictionaryArray = UserDefaults.standard.set(forKey: "flashcards") as? [[String: String]]{
-            //dictionary array
-            let savedCards = dictionaryArray.map
+        if let dictionArray = UserDefaults.standard.array(forKey: "flashcards") as? [[String: String]] {
+             //dictionary array
+            let savedCards = dictionArray.map { (dictionary) -> Flashcard in
+                return Flashcard(question: dictionary["question"]!, answer: dictionary["answer"]!)
+            }
+            flashcards.append(contentsOf: savedCards)
         }
+        //put all these cards into our array
     }
+
+
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         let navigationController = segue.destination as! UINavigationController
