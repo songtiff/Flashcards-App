@@ -81,12 +81,12 @@ class ViewController: UIViewController {
         flashcards.append(flashcard)
         
         // logging to the console
-        print("owo added new flashcard")
-        print("owo we now have \(flashcards.count) flashcards")
+        print("added new flashcard")
+        print("we now have \(flashcards.count) flashcards")
         
         //update current index
         currentIndex = flashcards.count - 1
-        print("owo our current index is \(currentIndex)")
+        print("our current index is \(currentIndex)")
         
         updateNextPrevButtons()
         updateLabels()
@@ -95,12 +95,18 @@ class ViewController: UIViewController {
     func updateNextPrevButtons() {
         //disable next button if at the end
         if currentIndex == flashcards.count - 1 {
-            nextButton.isEnabled = true
-        }
-        else {
             nextButton.isEnabled = false
         }
+        else {
+            nextButton.isEnabled = true
+        }
         //disable prev button if at the beginning
+        if currentIndex == 0 {
+            prevButton.isEnabled = false
+        }
+        else {
+            prevButton.isEnabled = true
+        }
     }
     
     func updateLabels() {
@@ -129,6 +135,27 @@ class ViewController: UIViewController {
         updateLabels()
         //update buttons
         updateNextPrevButtons()
+    }
+    
+    func saveAllFlashcardsToDisk() {
+        //from flashcard array to dictionary array
+        let dictionaryArray = flashcards.map { (card) -> [String: String] in
+            return["question": card.question, "answer": card.answer]
+        }
+        //save array to disk using user defaults
+        UserDefaults.standard.set(dictionaryArray, forKey: "flashcards")
+        
+        //log it
+        print("flashcards saved to user default")
+        
+    }
+    
+    func readSavedFlashcards() {
+        //read dictionary array from disk (if any)
+        if let dictionaryArray = UserDefaults.standard.set(forKey: "flashcards") as? [[String: String]]{
+            //dictionary array
+            let savedCards = dictionaryArray.map
+        }
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
