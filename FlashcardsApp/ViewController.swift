@@ -99,6 +99,7 @@ class ViewController: UIViewController {
         
         updateNextPrevButtons()
         updateLabels()
+        saveAllFlashcardsToDisk()
     }
     
     func updateNextPrevButtons() {
